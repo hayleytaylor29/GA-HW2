@@ -82,3 +82,51 @@ for (let i = 2; i <= root; i += 2){
     }
 }
 checkPrime("7");
+
+
+//ROCK PAPER SCISSOR -- was using my pre-course work as a reference,
+//I know we need to list out all the possibilities and compare, with the
+//options in an array but I'm running into a problem with the else if 
+//statements. Not sure what I'm doing wrong, I tried to play around
+//with the else and if's and couldn't get the error to go away. It says
+//declaration of statement expected and don't know how to fix.
+function randomMove(choice) {
+//create variables for the computer's and the user's random move
+let computersMove = randomMove();
+let usersMove = randomMove();
+//create a function for rock paper scissor
+function rockPaperScissor(){
+//create a variable to hold the choices
+let choice = ["rock", "paper", "scissor"];{
+for (let i = 0; i < choice.length; i++) {
+    //if the computers move and the user move match, it's a tie
+    if(computersMove===usersMove);
+    console.log("it's a tie");
+    //if the computer chooses rock and user chooses paper, user wins- I'm
+    //getting an error on line 102 and not sure why.
+} else if (computersMove===choice[0] && usersMove===choice[1]){
+    console.log("the user wins");
+    //if the computer chooses paper and the user chooses rock, the
+    //computer wins
+} else if (computersMove===choice[1] && usersMove===choice[0]){
+    console.log("the computer wins");
+    //if the computer chooses scissors and the user chooses paper,
+    //the computer wins
+} else if (computersMove===choice[2] && usersMove===choice[1]){
+    console.log("the computer wins");
+    //if the computer chooses scissor and the user chooses rock, the user
+    //wins
+} else if (computersMove===choice[2] && usersMove===choice[0]){
+    console.log("the user wins");
+    //if the computer chooses paper and the user chooses scissor, user wins
+} else if (computersMove===choice[1] && usersMove===choice[2]){
+    console.log("the user wins");
+    //if the computer chooses rock and the user chooses scissor, the
+    //computer wins
+} else if (computersMove===choice[0] && usersMove===choice[2]){
+    console.log("The computer wins")
+}
+}
+}
+}
+rockPaperScissor(computersMove, usersMove);
